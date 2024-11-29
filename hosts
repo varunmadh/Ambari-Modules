@@ -1,0 +1,22 @@
+[hadoop]
+ambari-agent1 ansible_host=100.104.3.236  aisandboxvm4 ansible_user=test  ansible_password=Test@Cloudlyte2024
+ambari-agent2 ansible_host=100.104.3.231  aisandboxvm1 ansible_user=test  ansible_password=Test@Cloudlyte2024
+ambari-server1 ansible_host=100.104.3.234 aisandboxvm2 ansible_user=test ansible_password=Test@Cloudlyte2024
+ambari-server2 ansible_host=100.104.3.235 aisandboxvm3 ansible_user=test ansible_password=Test@Cloudlyte2024
+
+
+[hadoop:vars]
+ansible_user=test
+ansible_become=yes
+ansible_become_method=sudo
+ansible_become_pass=Test@Cloudlyte2024
+ansible_ssh_private_key_file=/root/.ssh/id_rsa
+
+
+[ambari-agents]
+ambari-agent1
+ambari-agent2
+
+[ambari-servers]
+ambari-server1
+ambari-server2
